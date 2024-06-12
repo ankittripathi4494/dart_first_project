@@ -1,13 +1,22 @@
-// ignore_for_file: unnecessary_null_comparison
-// import 'calculator.dart';
-import 'null_safety_program_with_var.dart';
+import 'functions.dart' as f;
 
 void main() {
-  // calculatorProgram();
-  var nsv = NSV(); // object has a refrense point
-  print(nsv.hashCode);
+  f.FunctionsSect fs = f.FunctionsSect(); // object for FunctionsSect() class
+  // fs.funcCatOne(); // use or call funcCatOne
+  // var x =
+  //     fs.funcCatTwo(); // use or call funcCatTwo as save it's return value to x
 
-  nsv.setname = 45; // calling setter for initialize value
+  // print(x);
+  // print(x.runtimeType);
 
-  print(nsv.getname); // calling getter for get value
+  // fs.funcCatThree(23, 46); // use or call funcCatThree
+
+  // var x2 = fs.funcCatFour(
+  //     24, 56); // use or call funcCatFour as save it's return value to x
+
+  // print(x2);
+  // print(x2.runtimeType);
+// for
+// named function
+  fs.sampMapFunc2(firstStudentAge: '24', secondStudentAge: '34');
 }
