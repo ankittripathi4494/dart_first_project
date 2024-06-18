@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 class FunctionsSect {
   //funcCatOne -> return type(output) void and argumnets(input) null hai
   void funcCatOne() {
@@ -288,7 +289,24 @@ class FunctionsSect {
     };
   }
 
-  sampMapFunc2({required String firstStudentAge, required String secondStudentAge}) {
+//named function with required keyword
+  sampMapFunc2(
+      {required String firstStudentAge, required String secondStudentAge}) {
     print(double.parse(firstStudentAge) * double.parse(secondStudentAge));
+  }
+
+// default value with optional parameter example
+  sampFunc3({String? val1, String? val2, String? val3 = '0'}) {
+    print("Value 1 :- $val1");
+    (val2 == null) ? print("Value 2 :- No Data") : print("Value 2 :- $val2");
+    print("Value 3 :- $val3");
+  }
+
+  // function without input as a parameter example
+  sampFunc4(
+      {required int input1,
+      required int input2,
+      Function(int, int)? inputFunction}) {
+    inputFunction!(input1, input2); // call 'inputFunction' here
   }
 }
